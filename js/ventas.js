@@ -1,5 +1,6 @@
 window.addEventListener("load",()=>{
     //Creacion del objeto 
+    // localStorage.clear();
     var botonClear = document.getElementById("clear");
     botonClear.addEventListener("click",()=>{
         localStorage.clear();
