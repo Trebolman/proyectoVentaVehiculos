@@ -4,13 +4,9 @@
 <head>
 	<title>Venta de carros</title>
 	<meta charset="utf-8">
-<<<<<<< HEAD
-	
-=======
 	<script type="text/javascript" src="js/vehiculo.js"></script>
 	<script type="text/javascript" src="js/ventas.js"></script>
 	<script type="text/javascript" src="js/clientes.js"></script>
->>>>>>> 0a8f017faf64a963a7996fd8a0fc6c7f4baadf3e
 	<link rel="stylesheet" type="text/css" href="css/misestilos.css">
 </head>
 
@@ -18,36 +14,31 @@
 	<section id="cajapadre">
 		<div id="Clientes">
 			<h2>CLIENTES</h2>
-			<form name="miformulario" action="execute.js" method="post" onSubmit="return validar();">
+			<form name="miformulario">
 				<table>
 					<tr>
-						<td> Nombre </td>
+						<td>Nombre</td>
 						<td>
-							<input type="text" size="30" maxlength="100" id="nombre">
+							<input type="text" id="nombre">
 						</td>
 					</tr>
 					<tr>
 						<td>DNI: </td>
-						<td><input type="text" size="4" maxlength="10" id="dni">
+						<td><input type="text" id="dni">
 						</td>
 					</tr>
 				</table>
 			</form>
-			<button type="submit" id="ButtonCliente" onclick="guardarclientes();">Registrar</button>
+			<button type="submit" id="ButtonCliente">Registrar</button>
 			<button type="submit" >Editar</button>
-			<table class="tabla">
-				<thead>
-					<tr>
-						<th>Nombre</th>
-						<th>DNI</th>
-					</tr>
-				</thead>
-				<tbody id="tbodyCliente">
-					
-				</tbody>
+			<table class="tabla" id="TablaRegistroClientes">
+				<tr>
+					<th>Nombre</th>
+					<th>DNI</th>
+				</tr>
 			</table>
-
 		</div>
+
 		<div id="Vehiculo">
 			<h1>VEHICULOS</h1>
 			<div id="FormularioV">
@@ -93,25 +84,21 @@
 				<br>
 			</div>
 			<div id="divRegistrar">
-				<button type="submit" id="Button" onclick="guardarVehiculos();">Registrar</button>
+				<button type="submit" id="Button">Registrar</button>
 				<br>
-				<table class="tabla" id="tablita">
-					<thead>
-						<tr>
-							<th>Color</th>
-							<th>Placa</th>
-							<th>Tipo</th>
-							<th>Año Fabricacion</th>
-							<th>C.c</th>
-							<th>P</th>
-						</tr>
-					</thead>
-					<tbody id="tbody">
-						
-					</tbody>
+				<table class="tabla" id="TablaRegistroVehiculos">
+					<tr>
+						<th>Color</th>
+						<th>Placa</th>
+						<th>Tipo</th>
+						<th>Año</th>
+						<th>Cilindraje</th>
+						<th>Potencia</th>
+					</tr>
 				</table>
 			</div>
 		</div>
+
 		<div id="Ventas">
 			<p>
 				<h1>VENTAS</h1>
@@ -123,14 +110,20 @@
 						<li>Precio: </li>
 						<li>Numero de factura: </li>
 						<li>Fecha: </li>
+						<li>Seleccione vehiculo: </li>
 					</ul>
-
 				</div>
 				<div id="entradas">
-					<input type="text" id="nombreCliente"><br>
+					<select name="" id="selecClientes">
+							
+					</select><br>
+					<!-- <input type="text" id="nombreCliente"><br> -->
 					<input type="number" id="precioVenta"><br>
 					<input type="number" id="nroFactura"><br>
-					<input type="date" id="fechaVenta">
+					<input type="date" id="fechaVenta"><br>
+					<select name="" id="selecVehiculos">
+								
+					</select>
 				</div>
 
 			</div>
@@ -140,16 +133,21 @@
 			</div>
 			<div>
 				<table id="TablaRegistroVentas">
-					<th>NombreCliente</th>
-					<th>Precio</th>
-					<th>NroFactura</th>
-					<th>Fecha</th>
+					<tr>
+						<th>NombreCliente</th>
+						<th>Precio</th>
+						<th>NroFactura</th>
+						<th>Fecha</th>
+						<th>Placa</th>
+					</tr>
 				</table>
-
 			</div>
 		</div>
 		<div id="Factura">
-			<table border="1px" class="tabla" id="miTabla">
+			<p>
+				<h1>FACTURAS</h1>
+			</p>
+			<table id="TablaFacturas">
 				<tr>
 					<th>Cliente</th>
 					<th>Fecha</th>
@@ -160,11 +158,7 @@
 			</table>
 		</div>
 	</section>
-<<<<<<< HEAD
-	<button id="clear">Clear localStorage</button>
-=======
-	
->>>>>>> bc04c30127af2d9a6d6d8da32f324cd5c39e452f
+	<button id="clear">clear</button>
 </body>
 
 </html>

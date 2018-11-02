@@ -22,7 +22,7 @@
 }
 /*ESTILOS PARA LA SECCION DE CLIENTES*/
 #Clientes{
-    width: 30%;
+    width: 20%;
     
 }
 
@@ -47,7 +47,7 @@ button{
 }
 
 #Vehiculo{
-    width: 30%;
+    width: 40%;
     display: inline-block;
     /*justify-content: center;
     align-items: center;*/
@@ -110,6 +110,9 @@ p, #Ventas h1{
 }
 
 /*ESTILOS SECCION FACTURA*/
+#Factura h1{
+    text-align: center;
+}
 
 /* BOTON CLEAR LOCALSTORAGE */
 #clear{
